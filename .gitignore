@@ -1,0 +1,33 @@
+# Ignore Everything
+*
+
+# Retropie
+!Retropie/**/*
+!Retropie-Setup/**/*
+
+# Attract Mode
+!.attract/*
+.attract/**/scraper/*
+.attract/**/.DS_Store
+!.attract/scraper/Attract Mode Setup/*
+
+# retroGameCollectionScripts
+!retroGameCollectionScripts/*
+retroGameCollectionScripts/fuzzyRenameRoms/node_modules/*
+
+# Install scripts
+!attractModeInstall.sh
+!bt_speaker_install.sh
+
+# Other
+!.gitignore
+!attractModeInstall.sh
+!bt_speaker_install.sh
+!LICENSE
+!README.md
+
+# Self Hosted
+!Caddyfile
+
+# .DS_Store
+**/.DS_Store

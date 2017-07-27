@@ -1,0 +1,15 @@
+{
+  "name": "fuzzyrenameroms",
+  "version": "1.0.0",
+  "description": "Fuzzy Search to rename roms in two different folders",
+  "main": "fuzzyRenameRoms.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "torch2424",
+  "license": "ISC",
+  "dependencies": {
+    "fuse.js": "^3.0.3",
+    "yesno": "0.0.1"
+  }
+}

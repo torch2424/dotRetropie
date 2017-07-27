@@ -1,0 +1,6 @@
+0.0.0.0:80 {
+    proxy / localhost:8989 {
+        transparent
+        websocket
+    }	
+}
