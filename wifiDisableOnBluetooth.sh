@@ -1,5 +1,6 @@
 #!/bin/bash
 
+sudo apt-get install -y inotify-tools
 while true
 do
   RES=`inotifywait -q -e CREATE,DELETE /dev/input/`
