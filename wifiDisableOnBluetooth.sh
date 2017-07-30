@@ -24,4 +24,4 @@ do
   esac
   # Allow ctrl c out
   test $? -gt 128 && break;
-done &
+done
