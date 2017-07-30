@@ -1,6 +1,16 @@
 #!/bin/bash
 
-sudo apt-get install -y inotify-tools
+
+# Check for required packages
+function package_exists() {
+    return dpkg -l "$1" &> /dev/null
+}
+
+if ! package_exists inotify-tools ; then
+    sudo apt-get install -y inotify-tools
+fi
+
+# Loop through to search for bluetooth connect/disconnect
 while true
 do
   RES=`inotifywait -q -e CREATE,DELETE /dev/input/`
