@@ -11,14 +11,17 @@ if ! package_exists inotify-tools ; then
 fi
 
 # Loop through to search for bluetooth connect/disconnect
+echo "Waiting for bluetooth event..."
 while true
 do
   RES=`inotifywait -q -e CREATE,DELETE /dev/input/`
   case "$RES" in
     "/dev/input/ DELETE event1")
+    echo "bluetooth disconnected, resuming wifi..."
     ifconfig wlan0 up
     ;;
     "/dev/input/ CREATE event1")
+    echo "bluetooth reconnected, disabling wifi..."
     ifconfig wlan0 down
     ;;
   esac
