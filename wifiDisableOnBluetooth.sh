@@ -11,4 +11,6 @@ do
     ifconfig wlan0 down
     ;;
   esac
+  # Allow ctrl c out
+  test $? -gt 128 && break;
 done &
